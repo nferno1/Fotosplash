@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayoutPhotoDetails"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.details.DetailsFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayoutDetailsPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageViewDetailsPhoto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                app:layout_constraintEnd_toEndOf="@+id/constraintLayoutDetailsPhoto"
+                app:layout_constraintStart_toStartOf="@+id/constraintLayoutDetailsPhoto"
+                app:layout_constraintTop_toTopOf="@+id/constraintLayoutDetailsPhoto"
+                tools:layout_height="250dp"
+                tools:src="@mipmap/ic_launcher_round" />
+
+            <ImageView
+                android:id="@+id/backArrowPhotoDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/icon_shape"
+                android:rotation="180"
+                android:src="@drawable/round_next"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/white" />
+
+            <ImageView
+                android:id="@+id/sharedPhotoDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/icon_shape"
+                android:rotation="180"
+                android:src="@drawable/ic_share"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/white" />
+
+            <View
+                android:id="@+id/gradientDetailsPhoto"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/gradient"
+                app:layout_constraintBottom_toBottomOf="@+id/imageViewDetailsPhoto"
+                app:layout_constraintEnd_toEndOf="@+id/imageViewDetailsPhoto"
+                app:layout_constraintStart_toStartOf="@+id/imageViewDetailsPhoto" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewImageDetailsPhoto"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                app:cardCornerRadius="15dp"
+                app:layout_constraintBottom_toBottomOf="@+id/gradientDetailsPhoto"
+                app:layout_constraintStart_toStartOf="@+id/gradientDetailsPhoto"
+                app:layout_constraintTop_toTopOf="@+id/gradientDetailsPhoto">
+
+                <ImageView
+                    android:id="@+id/imageProfileItemWidthFullScreen"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:scaleType="centerCrop"
+                    tools:src="@mipmap/ic_launcher_round" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/nameFirstAndLastDetailsPhoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="5dp"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/nameUserDetailsPhoto"
+                app:layout_constraintStart_toEndOf="@+id/cardViewImageDetailsPhoto"
+                app:layout_constraintTop_toTopOf="@+id/gradientDetailsPhoto"
+                tools:text="nferno1" />
+
+            <TextView
+                android:id="@+id/nameUserDetailsPhoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageViewDetailsPhoto"
+                app:layout_constraintStart_toEndOf="@+id/cardViewImageDetailsPhoto"
+                app:layout_constraintTop_toBottomOf="@+id/nameFirstAndLastDetailsPhoto"
+                tools:text="\@nferno1" />
+
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/barrier3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="end"
+                app:constraint_referenced_ids="nameUserDetailsPhoto,nameFirstAndLastDetailsPhoto" />
+
+
+            <TextView
+                android:id="@+id/likesDetailsPhoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_marginTop="10dp"
+                android:drawablePadding="4dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:drawableEndCompat="@drawable/like_border"
+                app:layout_constraintBottom_toBottomOf="@+id/imageViewDetailsPhoto"
+                app:layout_constraintEnd_toEndOf="@+id/imageViewDetailsPhoto"
+                app:layout_constraintTop_toTopOf="@+id/nameFirstAndLastDetailsPhoto"
+                tools:text="254" />
+
+            <TextView
+                android:id="@+id/locationDetailsPhoto"
+                style="@style/Theme.nferno1.fotosplash.Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:drawablePadding="6dp"
+                android:textSize="14sp"
+                app:drawableStartCompat="@drawable/baseline_location_on_24"
+                app:layout_constraintStart_toStartOf="@+id/constraintLayoutDetailsPhoto"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewDetailsPhoto"
+                tools:text="Kemerovo, RU" />
+
+            <TextView
+                android:id="@+id/tagsDetailsPhoto"
+                style="@style/Theme.nferno1.fotosplash.Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:textAlignment="center"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@+id/constraintLayoutDetailsPhoto"
+                app:layout_constraintStart_toStartOf="@+id/constraintLayoutDetailsPhoto"
+                app:layout_constraintTop_toBottomOf="@+id/locationDetailsPhoto"
+                tools:text="#woman #model #nature #rights #womanrights" />
+
+            <TextView
+                android:id="@+id/cameraPhotoDetails"
+                style="@style/Theme.nferno1.fotosplash.Text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="50dp"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toStartOf="@+id/aboutUserPhotoDetails"
+                app:layout_constraintStart_toStartOf="@+id/constraintLayoutDetailsPhoto"
+                app:layout_constraintTop_toBottomOf="@+id/tagsDetailsPhoto"
+                tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck"
+                tools:text="Made with: Canon\nModel: EOS 4\xposure: 0.01s\nAperture: 4.970854\nFocal Length: 37\nISO: 100" />
+
+            <TextView
+                android:id="@+id/aboutUserPhotoDetails"
+                style="@style/Theme.nferno1.fotosplash.Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@+id/constraintLayoutDetailsPhoto"
+                app:layout_constraintStart_toEndOf="@+id/cameraPhotoDetails"
+                app:layout_constraintTop_toBottomOf="@+id/tagsDetailsPhoto"
+                tools:text="About @nferno1:"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/aboutTextUserPhotoDetails"
+                style="@style/Theme.nferno1.fotosplash.Text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@+id/aboutUserPhotoDetails"
+                app:layout_constraintStart_toStartOf="@+id/aboutUserPhotoDetails"
+                app:layout_constraintTop_toBottomOf="@+id/aboutUserPhotoDetails"
+                tools:text="Dreamer, creator. Strong man, stronger passion."
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/downloadPhotoDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="6dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:paddingEnd="8dp"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:drawableEndCompat="@drawable/download"
+                app:layout_constraintBottom_toBottomOf="@+id/likesDetailsPhoto"
+                app:layout_constraintEnd_toStartOf="@+id/likesDetailsPhoto"
+                app:layout_constraintStart_toEndOf="@+id/barrier3"
+                app:layout_constraintTop_toTopOf="@+id/likesDetailsPhoto"
+                tools:text="124" />
+
+            <ProgressBar
+                android:id="@+id/progressBarPhotoDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                app:layout_constraintBottom_toTopOf="@+id/gradientDetailsPhoto"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:visibility="visible" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</FrameLayout>

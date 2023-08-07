@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/slide"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/cameraImage"
+        android:layout_width="400dp"
+        android:layout_height="370dp"
+        android:src="@drawable/blank4"
+        app:layout_constraintBottom_toTopOf="@+id/imageCircle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageCircle"
+        android:layout_width="606dp"
+        android:layout_height="555dp"
+        android:layout_marginTop="400dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/baseline_desktop_mac_24" />
+
+    <TextView
+        android:id="@+id/textOnBoarding"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:lineSpacingExtra="3sp"
+        android:text="@string/onBording1"
+        android:textAppearance="@style/Theme.nferno1.fotosplash.TextOnBording"
+        android:textSize="27sp"
+        android:textStyle="bold"
+        android:translationY="-1.58sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageCircle"
+        app:layout_constraintVertical_bias="0.67" />
+</androidx.constraintlayout.widget.ConstraintLayout>

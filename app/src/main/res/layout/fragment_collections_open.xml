@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/constraintLayoutCollectionOpen"
+    tools:context=".ui.collectionsOpen.CollectionsOpen">
+
+    <ImageView
+        android:id="@+id/imageViewCollectionsOpen"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:alpha="0.3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:scaleType="centerCrop"
+        tools:src="@drawable/blank4" />
+
+    <TextView
+        android:id="@+id/titleCollectionsOpen"
+        style="@style/Theme.nferno1.fotosplash.Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:textAllCaps="true"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="woman parade" />
+
+    <TextView
+        android:id="@+id/tagsCollectionsOpen"
+        style="@style/Theme.nferno1.fotosplash.Text"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleCollectionsOpen"
+        tools:text="#woman @womannights #strong #unity" />
+
+    <TextView
+        android:id="@+id/descriptionCollectionsOpen"
+        style="@style/Theme.nferno1.fotosplash.Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tagsCollectionsOpen"
+        tools:text="A powerful collection of powerful images" />
+
+    <TextView
+        android:id="@+id/usernameCollectionsOpen"
+        style="@style/Theme.nferno1.fotosplash.Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionCollectionsOpen"
+        tools:text="11 images by \@alexosesso"
+        tools:ignore="SmallSp" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycle_viewCollectionsOpen"
+        style="@style/Theme.nferno1.fotosplash.Text"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewCollectionsOpen"
+        tools:listitem="@layout/item_unsplash_photo_width_full_screen" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <ImageView
+        android:id="@+id/imageViewWidthFullScreen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_height="250dp"
+        tools:scaleType="centerCrop"
+        tools:src="@mipmap/ic_launcher_round" />
+
+    <ProgressBar
+        android:id="@+id/progressBarItemidthFullScreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/gradientViewWidthFullScreen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+    <View
+        android:id="@+id/gradientViewWidthFullScreen"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/gradient"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewImageProfileWidthFullScreen"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/gradientViewWidthFullScreen"
+        app:layout_constraintStart_toStartOf="@+id/gradientViewWidthFullScreen"
+        app:layout_constraintTop_toTopOf="@+id/gradientViewWidthFullScreen">
+
+        <ImageView
+            android:id="@+id/imageProfileItemWidthFullScreen"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:scaleType="centerCrop"
+            tools:src="@mipmap/ic_launcher_round" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/nameFirstAndLastWidthFullScreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="8dp"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/nameUserWidthFullScreen"
+        app:layout_constraintStart_toEndOf="@+id/cardViewImageProfileWidthFullScreen"
+        app:layout_constraintTop_toTopOf="@+id/gradientViewWidthFullScreen"
+        tools:text="nferno1" />
+
+    <TextView
+        android:id="@+id/nameUserWidthFullScreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:layout_marginStart="8dp"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:textColor="@color/white"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewWidthFullScreen"
+        app:layout_constraintStart_toEndOf="@+id/cardViewImageProfileWidthFullScreen"
+        app:layout_constraintTop_toBottomOf="@+id/nameFirstAndLastWidthFullScreen"
+        tools:text="\@nferno1" />
+
+    <TextView
+        android:id="@+id/downloadWidthFullScreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:paddingEnd="8dp"
+        android:layout_marginEnd="8dp"
+        android:ellipsize="end"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textColor="@color/white"
+        android:drawablePadding="6dp"
+        android:drawableTint="@color/white"
+        app:drawableEndCompat="@drawable/download"
+        app:layout_constraintBottom_toBottomOf="@+id/likesWidthFullScreen"
+        app:layout_constraintTop_toTopOf="@+id/likesWidthFullScreen"
+        app:layout_constraintEnd_toStartOf="@+id/likesWidthFullScreen"
+         tools:text="Download (124)" />
+
+    <TextView
+        android:id="@+id/likesWidthFullScreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:drawablePadding="4dp"
+        android:ellipsize="end"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textColor="@color/white"
+        app:drawableEndCompat="@drawable/like_border"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewWidthFullScreen"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewWidthFullScreen"
+        app:layout_constraintTop_toTopOf="@+id/nameFirstAndLastWidthFullScreen"
+        tools:text="254" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

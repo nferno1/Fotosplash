@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayoutUserDetails"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.userdetails.UserDetails">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewImageUser"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        app:cardCornerRadius="35dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:adjustViewBounds="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription,ImageContrastCheck"
+            tools:src="@mipmap/ic_launcher" />
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/logoutButton"
+        android:layout_width="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_loguot"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/nameInUserFragment"
+        style="@style/Theme.nferno1.fotosplash.Text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="12dp"
+        android:maxLines="2"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/cardViewImageUser"
+        app:layout_constraintTop_toTopOf="@id/cardViewImageUser"
+        tools:text="nferno1" />
+
+    <TextView
+        android:id="@+id/userNameInUserFragment"
+        style="@style/Theme.nferno1.fotosplash.Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/cardViewImageUser"
+        app:layout_constraintTop_toBottomOf="@id/nameInUserFragment"
+        tools:text="\@nferno1" />
+
+
+    <TextView
+        android:id="@+id/follow"
+        style="@style/Theme.nferno1.fotosplash.Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginBottom="13dp"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/location"
+        app:layout_constraintStart_toEndOf="@id/cardViewImageUser"
+        app:layout_constraintTop_toBottomOf="@id/userNameInUserFragment"
+        tools:text="Share photos, put likes" />
+
+    <TextView
+        android:id="@+id/location"
+        style="@style/Theme.nferno1.fotosplash.Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="13dp"
+        android:clickable="true"
+        android:drawablePadding="6dp"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:textSize="14sp"
+        app:drawableStartCompat="@drawable/baseline_location_on_24"
+        app:layout_constraintStart_toEndOf="@id/cardViewImageUser"
+        app:layout_constraintTop_toBottomOf="@id/follow"
+        tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck"
+        tools:text="Kemerovo, RU" />
+
+    <TextView
+        android:id="@+id/mail"
+        style="@style/Theme.nferno1.fotosplash.Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:drawableStart="@drawable/email"
+        android:drawablePadding="6dp"
+        android:gravity="center_vertical"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/cardViewImageUser"
+        app:layout_constraintTop_toBottomOf="@id/location"
+        tools:text="nferno1@mail.ru"
+
+        />
+
+    <TextView
+        android:id="@+id/download"
+        style="@style/Theme.nferno1.fotosplash.Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:drawablePadding="6dp"
+        android:gravity="center_vertical"
+        android:textSize="14sp"
+        app:drawableStartCompat="@drawable/download"
+        app:layout_constraintStart_toEndOf="@id/cardViewImageUser"
+        app:layout_constraintTop_toBottomOf="@id/mail"
+        tools:text="69" />
+
+    <TextView
+        android:id="@+id/tabFoto"
+        style="@style/Theme.nferno1.fotosplash.Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:minHeight="48dp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@+id/tabLikes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/download"
+        tools:text="123\nфотографии" />
+
+    <TextView
+        android:id="@+id/tabLikes"
+        style="@style/Theme.nferno1.fotosplash.Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:minHeight="48dp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@+id/collection"
+        app:layout_constraintStart_toEndOf="@+id/tabFoto"
+        app:layout_constraintTop_toBottomOf="@+id/download"
+        tools:text="44\nпонравилось" />
+
+    <TextView
+        android:id="@+id/collection"
+        style="@style/Theme.nferno1.fotosplash.Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:minHeight="48dp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tabLikes"
+        app:layout_constraintTop_toBottomOf="@+id/download"
+        tools:text="1\nколекции" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycle_view"
+        style="@style/Theme.nferno1.fotosplash.Text"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/collection"
+        app:layout_constraintVertical_bias="0.0"
+        tools:listitem="@layout/item_unsplash_photo" />
+
+    <View
+        android:id="@+id/viewGradient"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/gradient"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/confirmation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/confirmation"
+        style="@style/Theme.nferno1.fotosplash.Exit_Constrain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:visibility="visible">
+
+        <TextView
+            android:id="@+id/youSureText"
+            style="@style/Theme.nferno1.fotosplash.Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="34dp"
+            android:layout_marginBottom="28dp"
+            android:gravity="center"
+            android:paddingStart="26dp"
+            android:paddingEnd="26dp"
+            android:text="@string/youSureString"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@+id/buttonYes"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/confirmation" />
+
+        <Button
+            android:id="@+id/buttonNo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="34dp"
+            android:backgroundTint="@color/buttonNoGrey"
+            android:text="@string/No"
+            android:textAllCaps="false"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/buttonYes"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/buttonYes" />
+
+        <Button
+            android:id="@+id/buttonYes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="22dp"
+            android:layout_marginBottom="34dp"
+            android:text="@string/Yes"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/buttonNo" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+

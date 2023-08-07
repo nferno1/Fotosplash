@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">Fotosplash</string>
+    <string name="title_home">TAPE</string>
+    <string name="title_dashboard">COLLECTIONS</string>
+    <string name="title_notifications">PROFILE</string>
+    <string name="retry">Repeat</string>
+    <string name="error">Failed to load data</string>
+    <string name="resultEmpty">No result received</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="onBording1">Create pictures, publish, gather an audience, get feedback!</string>
+    <string name="onBording2">Share with friends, collect collections</string>
+    <string name="onBording3">Upload your favorite pictures and track statistics</string>
+    <string name="getStarted">Get started</string>
+    <string name="autorization">Login via unsplash</string>
+    <string name="topOnToday">Top today:</string>
+    <string name="Yes">Yes</string>
+    <string name="No">No</string>
+    <string name="youSureString">Are you sure you want to get out? All data will be deleted</string>
+    <string name="Photo">PHOTO</string>
+    <string name="imagesBY">images by @</string>
+    <string name="about">About</string>
+    <string name="cash">Data is loaded from the Cache</string>
+    <string name="photograf">photos</string>
+    <string name="liked">liked</string>
+    <string name="collections">collections</string>
+    <string name="follow">Subscribers</string>
+    <string name="follow2">share photos, put likes</string>
+    <string name="madeWith">"Made with: "</string>
+    <string name="model">"Model: "</string>
+    <string name="exposure">"Exposure: "</string>
+    <string name="aperture">"Aperture: "</string>
+    <string name="focal">"Focal Length: "</string>
+    <string name="errorSnackBar">Network error: Download will continue later</string>
+    <string name="doneSnackBar">Photo uploaded successfully</string>
+    <string name="permisiionGrand">Please give permission to download</string>
+    <string name="titleNotification">Загрузка фотографии</string>
+    <string name="doneTextNotification">Фотография загружена</string>
+    <string name="falseTextNotification">При загрузке произошла ошибка, попробуй снова</string>
+    <string name="search" translatable="false">Поиск</string>
+</resources>

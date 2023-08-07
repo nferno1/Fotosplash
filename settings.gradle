@@ -1,0 +1,26 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        flatDir {
+            dirs 'libs'
+        }
+        jcenter()
+        maven { url "https://jitpack.io" }
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        jcenter()
+        flatDir {
+            dirs 'libs'
+        }
+        maven { url "https://jitpack.io" }
+        mavenCentral()
+    }
+}
+rootProject.name = "nferno1.fotosplash"
+include ':app'

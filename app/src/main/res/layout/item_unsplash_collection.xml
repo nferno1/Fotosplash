@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_unpslash_collection"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="200dp">
+
+    <ImageView
+        android:id="@+id/imageViewInCollections"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:adjustViewBounds="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_height="200dp"
+        tools:scaleType="centerCrop"
+        tools:src="@mipmap/ic_launcher_round" />
+
+    <TextView
+        android:id="@+id/countPhotoInCollections"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="19dp"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="20 Фотографий" />
+
+    <TextView
+        android:id="@+id/nameCollections"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="8dp"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/countPhotoInCollections"
+        tools:text="Lines in the city" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewImageProfileInCollections"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="19dp"
+        app:cardCornerRadius="15dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewInCollections"
+        app:layout_constraintStart_toStartOf="@+id/imageViewInCollections">
+        <ImageView
+            android:id="@+id/imageProfileItemInCollectiuons"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:scaleType="centerCrop"
+            tools:src="@drawable/ic_error" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/nameFirstAndLastInCollections"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/nameUserCollections"
+        app:layout_constraintStart_toEndOf="@+id/cardViewImageProfileInCollections"
+        app:layout_constraintTop_toTopOf="@+id/cardViewImageProfileInCollections"
+        tools:text="nferno1" />
+
+    <TextView
+        android:id="@+id/nameUserCollections"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:textColor="@color/white"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@+id/cardViewImageProfileInCollections"
+        app:layout_constraintStart_toEndOf="@+id/cardViewImageProfileInCollections"
+        app:layout_constraintTop_toBottomOf="@+id/nameFirstAndLastInCollections"
+        tools:text="\@nferno1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
