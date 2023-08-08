@@ -2,10 +2,10 @@ package nferno1.fotosplash.utils
 
 object Constants {
     const val BASE_URL = "https://api.unsplash.com/"
-    const val ACCESS_KEY = "trkyfH5LTlraL03R_K06xlWyCr_qPqwkk0VW6RJdN4o"
+    const val ACCESS_KEY = "Your key"
     const val UNSPLASH_STARTING_PAGE_INDEX = 1
     const val UNSPLASH_PLUS = "unsplashplus"
-    const val SECRET = "_T4fKUsgY8lE4WacLFMOiL0iw2EjIAV5MR3TUDWjm38"
+    const val SECRET = "Your secret key"
     const val KEY_TOKEN = "key_token"
     const val redirectURI = "sst://localhost"
     const val KEY_ID_COLLECTION = "key_id_collection"
